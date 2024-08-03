@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare_app/responive/desktop_body.dart';
-import 'package:rideshare_app/responive/modile_body.dart';
-import 'package:rideshare_app/responive/responive_layout.dart';
+import 'package:rideshare_app/core/responive/desktop_body.dart';
+import 'package:rideshare_app/core/responive/modile_body.dart';
+import 'package:rideshare_app/core/responive/responive_layout.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());

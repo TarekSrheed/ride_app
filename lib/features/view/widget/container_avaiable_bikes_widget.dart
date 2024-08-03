@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ride/widget/button_widget.dart';
+import 'package:rideshare_app/core/res/app_color.dart';
+import 'package:rideshare_app/core/res/app_string.dart';
+import 'package:rideshare_app/features/view/widget/button_widget.dart';
 
 
 class ContainerAvaiableBikesWidget extends StatelessWidget {
@@ -20,10 +22,10 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xff008955).withOpacity(0.1),
+        color: darkPrimaryColor,
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: Color(0xff008955),
+          color:darkPrimaryColor,
         ),
       ),
       child: Column(
@@ -33,13 +35,13 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(specifications),
-              Container(width: 50, height: 30, child: Image.asset(image)),
+              SizedBox(width: 50, height: 30, child: Image.asset(image)),
             ],
           ),
           Row(
             children: [
-              Icon(Icons.location_on_sharp),
-              Text('${distance}(${duration}away)'),
+              const Icon(Icons.location_on_sharp),
+              Text('$distance(${duration}away)'),
             ],
           ),
           Row(
@@ -47,11 +49,11 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: ButtonWidget(
-                  title: 'View',
+                  title: VIEW,
                   ontap: () {},
                   color: Colors.white.withOpacity(0),
-                  textColor: Color(0xff008955),
-                  borderColor: Color(0xff008955),
+                  textColor: darkPrimaryColor,
+                  borderColor: darkPrimaryColor,
                   size: MediaQuery.of(context).size.width * 0.5,
                 ),
               ),

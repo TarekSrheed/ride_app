@@ -27,6 +27,7 @@
  String STREET = 'Street';
  String RENTAL = 'Rental';
  String SAVE = 'Save';
+ String VIEW = 'View';
  String DELIVERY = 'Delivery';
  String WHEREWOULDYOUGO = 'Where would you go?';
  String HOME = 'Home';

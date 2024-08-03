@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class ListTileRecentPlacesWidget extends StatelessWidget {
-  ListTileRecentPlacesWidget({
+  const ListTileRecentPlacesWidget({
     super.key,
     required this.title,
     required this.subtitle,
@@ -15,7 +15,7 @@ class ListTileRecentPlacesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       isThreeLine: true,
-      leading: Icon(Icons.location_on),
+      leading: const Icon(Icons.location_on),
       trailing: Text(trailingText),
       title: Text(
         title,

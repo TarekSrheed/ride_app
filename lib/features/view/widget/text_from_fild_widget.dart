@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFromFildWidget extends StatelessWidget {
-  TextFromFildWidget({
+  const TextFromFildWidget({
     this.suffixIcon,
     this.prefixIcon,
     required this.controller,
@@ -21,7 +21,7 @@ class TextFromFildWidget extends StatelessWidget {
             suffixIcon: suffixIcon,
             prefixIcon: prefixIcon,
             hintText: hintText,
-            border: OutlineInputBorder()),
+            border: const OutlineInputBorder()),
       ),
     );
   }
