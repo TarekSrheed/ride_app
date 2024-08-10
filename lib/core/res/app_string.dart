@@ -2,11 +2,21 @@
 
 
  String SKIP = 'Skip';
+ String PASSWORDMUSTHAVEUPPERCASE = 'password must have uppercase character';
+ String USERNAMEINUSE = 'User name in used';
+ String PHONENUMMUSTHAVE10 = 'phone number must have 10 number';
+ String PHONENUMINUSE = 'Phone number in use';
+ String PASSWORDMUSTHAVESPICALCHARACTER = 'password must have speical character';
+ String PASSWORDMUSTHAVE8 = 'password must have 8 character';
+ String PASSWORDMUSTHAVENUM = 'password must have number';
+
  String ANYWHERE = 'Anywhere you are';
  String SELLHOUSES = 'Sell houses easily with the help of Listenoryx and to make this line big I am writing more.';
  String ATANYTIME = 'At anytime';
  String BOOKYOURCAR = 'Book your car';
+ String INVALIDEMAILORPASSWORD = 'invalid email or password';
  String GO = 'Go';
+ String USERNOTFOUND = 'user not found';
  String ENABLEYOURLOCATION = 'Enable your location';
  String CHOOSE = 'Choose your location to start find the request around you';
  String USEMYLOCATION = 'Use my location';
