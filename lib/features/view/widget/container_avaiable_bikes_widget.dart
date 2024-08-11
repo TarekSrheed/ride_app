@@ -3,9 +3,8 @@ import 'package:rideshare_app/core/res/app_color.dart';
 import 'package:rideshare_app/core/res/app_string.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
 
-
 class ContainerAvaiableBikesWidget extends StatelessWidget {
-  ContainerAvaiableBikesWidget({
+  const ContainerAvaiableBikesWidget({
     super.key,
     required this.typeBikes,
     required this.specifications,
@@ -25,7 +24,7 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
         color: darkPrimaryColor,
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color:darkPrimaryColor,
+          color: darkPrimaryColor,
         ),
       ),
       child: Column(
@@ -54,7 +53,8 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
                   color: Colors.white.withOpacity(0),
                   textColor: darkPrimaryColor,
                   borderColor: darkPrimaryColor,
-                  size: MediaQuery.of(context).size.width * 0.5,
+                  width: 50,
+                  height: 20,
                 ),
               ),
             ],
