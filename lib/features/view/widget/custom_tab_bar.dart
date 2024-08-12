@@ -13,7 +13,7 @@ class _CustomTabbarState extends State<CustomTabbar>
     with SingleTickerProviderStateMixin {
   late final TabController tabBarController;
   List<Widget> tabs = [
-    Text(TRANSPORT),
+    Text('TRANSPORT'),
     Text(DELIVERY),
   ];
 
@@ -37,7 +37,7 @@ class _CustomTabbarState extends State<CustomTabbar>
         padding: const EdgeInsets.all(8.0),
         child: TabBar(
           tabs: [
-            Text(TRANSPORT),
+            Text('TRANSPORT'),
             Text(DELIVERY),
           ],
           indicatorSize: TabBarIndicatorSize.tab,

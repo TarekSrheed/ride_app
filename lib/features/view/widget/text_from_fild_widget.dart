@@ -5,12 +5,13 @@ class TextFromFildWidget extends StatelessWidget {
     this.suffixIcon,
     this.prefixIcon,
     required this.controller,
-    required this.hintText,
+    required this.lableText, required this.lableStyle, 
   });
   final TextEditingController controller;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
-  final String hintText;
+  final String lableText;
+    final TextStyle lableStyle;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,7 +21,8 @@ class TextFromFildWidget extends StatelessWidget {
         decoration: InputDecoration(
             suffixIcon: suffixIcon,
             prefixIcon: prefixIcon,
-            hintText: hintText,
+            labelText: lableText,
+            labelStyle: lableStyle,
             border: const OutlineInputBorder()),
       ),
     );
