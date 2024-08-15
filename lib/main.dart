@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rideshare_app/core/bloc_manager/app_manager_bloc.dart';
 import 'package:rideshare_app/core/config/service_locater.dart';
 import 'package:rideshare_app/features/view/bloc/auth_bloc/auth_bloc.dart';
+import 'package:rideshare_app/features/view/pages/onboarding_view.dart';
+import 'package:rideshare_app/features/view/pages/welcome_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,10 +32,10 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             switch (state) {
               case NavigateToMainPage():
-                return homepage();
+                return WelcomView();
               case NavigateToOffline():
                 return oflinePage();
-       
+
               default:
                 return LoginPage();
             }
@@ -47,8 +49,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
 
 class homepage extends StatelessWidget {
   const homepage({super.key});
