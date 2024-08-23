@@ -1,13 +1,11 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:rideshare_app/core/res/app_color.dart';
 import 'package:rideshare_app/core/res/app_style.dart';
-import 'package:rideshare_app/features/view/pages/Complete_your_profile_view.dart';
+import 'package:rideshare_app/features/view/pages/authentication/Complete_your_profile_view.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
 import 'package:rideshare_app/features/view/widget/text_from_fild_widget.dart';
 
-import '../../../core/res/app_string.dart';
+import '../../../../core/res/app_string.dart';
 
 class SetPasswordView extends StatelessWidget {
   SetPasswordView({super.key});
@@ -44,17 +42,23 @@ class SetPasswordView extends StatelessWidget {
                   ),
                 ),
               ),
-              TextFromFildWidget(
-                controller: passwordController,
-                lableText: ENTERYOURPASSWORD,
-                lableStyle: titleFavoStyle,
-                suffixIcon: Icon(Icons.visibility_off_outlined),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFromFildWidget(
+                  controller: passwordController,
+                  lableText: ENTERYOURPASSWORD,
+                  
+                  suffixIcon: Icon(Icons.visibility_off_outlined),
+                ),
               ),
-              TextFromFildWidget(
-                controller: confirmeController,
-                lableText: CONFIRMPASSWORD,
-                lableStyle: titleFavoStyle,
-                suffixIcon: Icon(Icons.visibility_off_outlined),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFromFildWidget(
+                  controller: confirmeController,
+                  lableText: CONFIRMPASSWORD,
+                  
+                  suffixIcon: Icon(Icons.visibility_off_outlined),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 35.0),

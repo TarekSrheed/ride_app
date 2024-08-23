@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:rideshare_app/core/res/app_color.dart';
-import 'package:rideshare_app/features/view/pages/set_password_view.dart';
+import 'package:rideshare_app/core/res/app_images.dart';
+import 'package:rideshare_app/features/view/pages/authentication/set_password_view.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
-import 'package:rideshare_app/features/view/widget/container_singup_with.dart';
+import 'package:rideshare_app/features/view/widget/container/container_singup_with.dart';
+
 import 'package:rideshare_app/features/view/widget/intl_phone.dart';
 
-import '../../../core/res/app_string.dart';
-import '../../../core/res/app_style.dart';
-import '../widget/text_from_fild_widget.dart';
+import '../../../../core/res/app_string.dart';
+import '../../../../core/res/app_style.dart';
+import '../../widget/text_from_fild_widget.dart';
 
 class SingUpView extends StatefulWidget {
   SingUpView({super.key});
@@ -41,19 +43,25 @@ class _SingUpViewState extends State<SingUpView> {
                 SIGNUPWITH,
                 style: titleStyle,
               ),
-              TextFromFildWidget(
-                controller: nameController,
-                lableText: NAME,
-                lableStyle: titleFavoStyle,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFromFildWidget(
+                  controller: nameController,
+                  lableText: NAME,
+                  
+                ),
               ),
-              TextFromFildWidget(
-                controller: emaillController,
-                lableText: EMAIL,
-                lableStyle: titleFavoStyle,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFromFildWidget(
+                  controller: emaillController,
+                  lableText: EMAIL,
+                  
+                ),
               ),
               IntlPhoneFildWidget(phoneController: phoneController),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: DropdownButtonFormField(
                   items: ['male', 'female'].map((String val) {
                     return DropdownMenuItem(
@@ -103,15 +111,15 @@ class _SingUpViewState extends State<SingUpView> {
               ),
               ContainerSingUpWithWidget(
                 title: SIGNUPWITHGMAIL,
-                image: 'images/Gmail.png',
+                image: gmailImage,
               ),
               ContainerSingUpWithWidget(
                 title: SIGNUPWITHFACEBOOK,
-                image: 'images/Gmail.png',
+                image: facebookImage,
               ),
               ContainerSingUpWithWidget(
                 title: SIGNUPWITHAPPLE,
-                image: 'images/Gmail.png',
+                image: appleImage,
               ),
               Text(
                 ALREADYHAVE,
@@ -122,4 +130,3 @@ class _SingUpViewState extends State<SingUpView> {
         ));
   }
 }
-

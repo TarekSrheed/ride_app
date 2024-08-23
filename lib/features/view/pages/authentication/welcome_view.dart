@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:rideshare_app/features/view/pages/sing_up_view.dart';
+import 'package:rideshare_app/features/view/pages/authentication/sing_up_view.dart';
 
-import '../../../core/res/app_color.dart';
-import '../../../core/res/app_string.dart';
-import '../../../core/res/app_style.dart';
-import '../widget/button_widget.dart';
+import '../../../../core/res/app_color.dart';
+import '../../../../core/res/app_string.dart';
+import '../../../../core/res/app_style.dart';
+import '../../widget/button_widget.dart';
 
 class WelcomView extends StatelessWidget {
   WelcomView({super.key});

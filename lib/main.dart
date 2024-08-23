@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rideshare_app/core/bloc_manager/app_manager_bloc.dart';
 import 'package:rideshare_app/core/config/service_locater.dart';
 import 'package:rideshare_app/features/view/bloc/auth_bloc/auth_bloc.dart';
-import 'package:rideshare_app/features/view/pages/onboarding_view.dart';
-import 'package:rideshare_app/features/view/pages/welcome_view.dart';
+import 'package:rideshare_app/features/view/pages/onboarding/onboarding_view.dart';
+import 'package:rideshare_app/features/view/pages/authentication/welcome_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        
         BlocProvider(
           create: (context) => core.get<AuthBloc>(),
         ),
