@@ -25,14 +25,14 @@ class WelcomView extends StatelessWidget {
                     top: paddingHeight * 0.1, bottom: paddingHeight * 0.03),
                 child: Image.asset('images/Welcome.png')),
             Text(
-              WELCOME,
+      AppString().        WELCOME,
               style: titleStyle,
             ),
             Padding(
               padding: EdgeInsets.only(
                   top: paddingHeight * 0.03, bottom: paddingHeight * 0.25),
               child: Text(
-                HAVEAETTER,
+             AppString().   HAVEAETTER,
                 style: subtitleStyle,
               ),
             ),
@@ -48,7 +48,7 @@ class WelcomView extends StatelessWidget {
               },
               size: MediaQuery.of(context).size.width,
               textColor: white,
-              title: CREATE,
+              title: AppString().CREATE,
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -65,7 +65,7 @@ class WelcomView extends StatelessWidget {
                 },
                 size: MediaQuery.of(context).size.width,
                 textColor: darkPrimaryColor,
-                title: LOGIN,
+                title:AppString(). LOGIN,
               ),
             ),
           ],

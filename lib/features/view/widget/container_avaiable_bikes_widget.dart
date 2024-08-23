@@ -48,7 +48,7 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: ButtonWidget(
-                  title: VIEW,
+                  title:AppString(). VIEW,
                   ontap: () {},
                   color: Colors.white.withOpacity(0),
                   textColor: darkPrimaryColor,

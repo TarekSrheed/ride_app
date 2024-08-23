@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:rideshare_app/core/res/app_color.dart';
+import 'package:rideshare_app/core/res/app_images.dart';
 import 'package:rideshare_app/features/view/pages/set_password_view.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
 import 'package:rideshare_app/features/view/widget/container_singup_with.dart';
@@ -12,16 +12,17 @@ import '../../../core/res/app_style.dart';
 import '../widget/text_from_fild_widget.dart';
 
 class SingUpView extends StatefulWidget {
-  SingUpView({super.key});
+  const SingUpView({super.key});
 
   @override
   State<SingUpView> createState() => _SingUpViewState();
 }
 
 class _SingUpViewState extends State<SingUpView> {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController emaillController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController userName = TextEditingController();
+  TextEditingController birthDate = TextEditingController();
+
   TextEditingController genderController = TextEditingController();
 
   @override
@@ -31,95 +32,98 @@ class _SingUpViewState extends State<SingUpView> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(BACK),
+          title: Text(AppString().BACK),
         ),
         body: Padding(
           padding: EdgeInsets.all(paddingWidth * 0.02),
-          child: ListView(
-            children: [
-              Text(
-                SIGNUPWITH,
-                style: titleStyle,
-              ),
-              TextFromFildWidget(
-                controller: nameController,
-                lableText: NAME,
-                lableStyle: titleFavoStyle,
-              ),
-              TextFromFildWidget(
-                controller: emaillController,
-                lableText: EMAIL,
-                lableStyle: titleFavoStyle,
-              ),
-              IntlPhoneFildWidget(phoneController: phoneController),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: DropdownButtonFormField(
-                  items: ['male', 'female'].map((String val) {
-                    return DropdownMenuItem(
-                      value: val,
-                      child: Text(
-                        val,
-                      ),
-                    );
-                  }).toList(),
-                  onChanged: (val) {
-                    genderController.text = val!;
-                    print(genderController.text);
-                  },
-                  decoration: InputDecoration(
-                    labelText: GENDER,
-                    labelStyle: titleFavoStyle,
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: darkPrimaryColor)),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+              AppString().    SIGNUPWITH,
+                  style: titleStyle,
+                ),
+                TextFromFildWidget(
+                  controller: userName,
+                  lableText:AppString(). USERNAME,
+                  lableStyle: titleFavoStyle,
+                ),
+                IntlPhoneFildWidget(phoneController: phone),
+                TextFromFildWidget(
+                  controller: birthDate,
+                  lableText:AppString(). BIRTHDATE,
+                  lableStyle: titleFavoStyle,
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 10),
+                  child: DropdownButtonFormField(
+                    items: ['male', 'female'].map((String val) {
+                      return DropdownMenuItem(
+                        value: val,
+                        child: Text(
+                          val,
+                        ),
+                      );
+                    }).toList(),
+                    onChanged: (val) {
+                      genderController.text = val!;
+                    },
+                    decoration: InputDecoration(
+                      labelText:AppString(). GENDER,
+                      labelStyle: titleFavoStyle,
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: darkPrimaryColor)),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                    ),
                   ),
                 ),
-              ),
-              ListTile(
-                title: Text(
-                  BYSIGININGUP,
-                  style: subtitleStyle,
+                ListTile(
+                  title: Text(
+                AppString().    BYSIGININGUP,
+                    style: subtitleStyle,
+                  ),
+                  leading: Icon(
+                    Icons.check_circle_outline,
+                    color: darkPrimaryColor,
+                  ),
                 ),
-                leading: Icon(
-                  Icons.check_circle_outline,
+                ButtonWidget(
+                  title:AppString(). SIGINUP,
+                  ontap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SetPasswordView(),
+                        ));
+                  },
                   color: darkPrimaryColor,
+                  textColor: white,
+                  borderColor: primaryColor,
+                  size: paddingWidth,
                 ),
-              ),
-              ButtonWidget(
-                title: SIGINUP,
-                ontap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SetPasswordView(),
-                      ));
-                },
-                color: darkPrimaryColor,
-                textColor: white,
-                borderColor: primaryColor,
-                size: paddingWidth,
-              ),
-              ContainerSingUpWithWidget(
-                title: SIGNUPWITHGMAIL,
-                image: 'images/Gmail.png',
-              ),
-              ContainerSingUpWithWidget(
-                title: SIGNUPWITHFACEBOOK,
-                image: 'images/Gmail.png',
-              ),
-              ContainerSingUpWithWidget(
-                title: SIGNUPWITHAPPLE,
-                image: 'images/Gmail.png',
-              ),
-              Text(
-                ALREADYHAVE,
-                style: titleStyle,
-              )
-            ],
+                // ContainerSingUpWithWidget(
+                //   title: SIGNUPWITHGMAIL,
+                //   image: gmailImage,
+                // ),
+                // ContainerSingUpWithWidget(
+                //   title: SIGNUPWITHFACEBOOK,
+                //   image: facebookImage,
+                // ),
+                // ContainerSingUpWithWidget(
+                //   title: SIGNUPWITHAPPLE,
+                //   image: appleImage,
+                // ),
+                Text(
+            AppString().      ALREADYHAVE,
+                  style: signUpWithStyle,
+                )
+              ],
+            ),
           ),
         ));
   }
 }
-

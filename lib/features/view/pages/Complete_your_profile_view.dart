@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-import 'package:rideshare_app/features/view/pages/sing_up_view.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
+import 'package:rideshare_app/features/view/widget/intl_phone.dart';
 
 import '../../../core/res/app_color.dart';
 import '../../../core/res/app_string.dart';
@@ -11,15 +10,15 @@ import '../widget/text_from_fild_widget.dart';
 
 class CompleteYourProfile extends StatelessWidget {
   CompleteYourProfile({super.key});
-  TextEditingController NameController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
-  TextEditingController emaillController = TextEditingController();
-  TextEditingController streetController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController streetController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(PROFILE),
+        title: Text(AppString().PROFILE),
         centerTitle: true,
       ),
       body: Padding(
@@ -53,38 +52,38 @@ class CompleteYourProfile extends StatelessWidget {
               ),
             ),
             TextFromFildWidget(
-              controller: NameController,
-              lableText: FULLNAME,
+              controller: nameController,
+              lableText: AppString().FULLNAME,
               lableStyle: titleFavoStyle,
             ),
             IntlPhoneFildWidget(
               phoneController: phoneController,
             ),
             TextFromFildWidget(
-              controller: emaillController,
-              lableText: EMAIL,
+              controller: emailController,
+              lableText: AppString().EMAIL,
               lableStyle: titleFavoStyle,
             ),
             TextFromFildWidget(
               controller: streetController,
-              lableText: STREET,
+              lableText: AppString().STREET,
               lableStyle: titleFavoStyle,
             ),
             TextFromFildWidget(
               controller: streetController,
-              lableText: CITY,
+              lableText: AppString().CITY,
               lableStyle: titleFavoStyle,
               suffixIcon: IconButton(
-                icon: Icon(Icons.keyboard_arrow_down),
+                icon: const Icon(Icons.keyboard_arrow_down),
                 onPressed: () {},
               ),
             ),
             TextFromFildWidget(
               controller: streetController,
-              lableText: DISTRICT,
+              lableText:AppString(). DISTRICT,
               lableStyle: titleFavoStyle,
               suffixIcon: IconButton(
-                icon: Icon(Icons.keyboard_arrow_down),
+                icon: const Icon(Icons.keyboard_arrow_down),
                 onPressed: () {},
               ),
             ),
@@ -93,17 +92,17 @@ class CompleteYourProfile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ButtonWidget(
-                    title: CANCEL,
+                    title:AppString(). CANCEL,
                     ontap: () {},
                     color: darkPrimaryColor.withOpacity(0),
                     textColor: titleColor,
                     borderColor: darkPrimaryColor,
                     size: MediaQuery.of(context).size.width * 0.4),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
                 ButtonWidget(
-                    title: SAVE,
+                    title: AppString().SAVE,
                     ontap: () {},
                     color: darkPrimaryColor,
                     textColor: white,

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/OnboardingView': (context) => OnboardingView(),
         '/WelcomView': (context) => WelcomView(),
-        '/SingUpView': (context) => SingUpView(),
+        '/SingUpView': (context) => const SingUpView(),
         '/SetPasswordView': (context) => SetPasswordView(),
         '/CompleteYourProfile': (context) => CompleteYourProfile(),
       },
@@ -47,7 +47,7 @@ class _OnboardingViewState extends State<OnboardingView>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
     );
     _animation =
         Tween<double>(begin: 1 / 3, end: 1 / 3).animate(_animationController)
@@ -80,7 +80,7 @@ class _OnboardingViewState extends State<OnboardingView>
         _animationController.forward(from: 0.0);
       });
       _pageController.nextPage(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.ease,
       );
     } else {
@@ -96,7 +96,7 @@ class _OnboardingViewState extends State<OnboardingView>
           TextButton(
             onPressed: () => _goToWelcomePage(context),
             child: Text(
-              SKIP,
+              AppString().SKIP,
               style: TextStyle(color: blackColor),
             ),
           ),
@@ -155,13 +155,13 @@ class _OnboardingViewState extends State<OnboardingView>
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(image),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         Text(
           text,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
       ],
     );
   }

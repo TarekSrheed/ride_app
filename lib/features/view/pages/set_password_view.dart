@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:rideshare_app/core/res/app_color.dart';
 import 'package:rideshare_app/core/res/app_style.dart';
@@ -11,14 +9,14 @@ import '../../../core/res/app_string.dart';
 
 class SetPasswordView extends StatelessWidget {
   SetPasswordView({super.key});
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController confirmeController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmeController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          BACK,
+        AppString().  BACK,
           style: titleStyle,
         ),
       ),
@@ -31,7 +29,7 @@ class SetPasswordView extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  SETPASSWORD,
+                  AppString().SETPASSWORD,
                   style: titleStyle,
                 ),
               ),
@@ -39,32 +37,32 @@ class SetPasswordView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 15.0),
                 child: Center(
                   child: Text(
-                    SETYOURPASSWORD,
+                   AppString(). SETYOURPASSWORD,
                     style: subtitleStyle,
                   ),
                 ),
               ),
               TextFromFildWidget(
                 controller: passwordController,
-                lableText: ENTERYOURPASSWORD,
+                lableText:AppString(). ENTERYOURPASSWORD,
                 lableStyle: titleFavoStyle,
-                suffixIcon: Icon(Icons.visibility_off_outlined),
+                suffixIcon: const Icon(Icons.visibility_off_outlined),
               ),
               TextFromFildWidget(
                 controller: confirmeController,
-                lableText: CONFIRMPASSWORD,
+                lableText:AppString(). CONFIRMPASSWORD,
                 lableStyle: titleFavoStyle,
-                suffixIcon: Icon(Icons.visibility_off_outlined),
+                suffixIcon: const Icon(Icons.visibility_off_outlined),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 35.0),
                 child: Text(
-                  ATLEAST,
+                AppString().  ATLEAST,
                   style: subtitleStyle,
                 ),
               ),
               ButtonWidget(
-                  title: REGISTER,
+                  title:AppString(). REGISTER,
                   ontap: () {
                     Navigator.push(
                       context,

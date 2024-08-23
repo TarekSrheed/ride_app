@@ -14,7 +14,7 @@ class _CustomTabbarState extends State<CustomTabbar>
   late final TabController tabBarController;
   List<Widget> tabs = [
     Text('TRANSPORT'),
-    Text(DELIVERY),
+    Text(AppString().DELIVERY),
   ];
 
   @override
@@ -38,7 +38,7 @@ class _CustomTabbarState extends State<CustomTabbar>
         child: TabBar(
           tabs: [
             Text('TRANSPORT'),
-            Text(DELIVERY),
+            Text(AppString().DELIVERY),
           ],
           indicatorSize: TabBarIndicatorSize.tab,
           labelColor: Colors.white,

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rideshare_app/core/bloc_manager/app_manager_bloc.dart';
 import 'package:rideshare_app/core/config/service_locater.dart';
 import 'package:rideshare_app/features/view/bloc/auth_bloc/auth_bloc.dart';
-import 'package:rideshare_app/features/view/pages/onboarding_view.dart';
+import 'package:rideshare_app/features/view/pages/sing_up_view.dart';
 import 'package:rideshare_app/features/view/pages/welcome_view.dart';
 
 void main() async {
@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        
         BlocProvider(
           create: (context) => core.get<AuthBloc>(),
         ),
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
                 return oflinePage();
 
               default:
-                return LoginPage();
+                return SingUpView();
             }
           },
         ),
@@ -45,32 +44,6 @@ class MyApp extends StatelessWidget {
         //   mobileBody: ModileBody(),
         //   desktopBody: DesktopBody(),
         // ),
-      ),
-    );
-  }
-}
-
-class homepage extends StatelessWidget {
-  const homepage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Home page'),
-      ),
-    );
-  }
-}
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Home page'),
       ),
     );
   }
