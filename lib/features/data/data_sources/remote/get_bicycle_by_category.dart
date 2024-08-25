@@ -1,8 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:rideshare_app/core/config/service_locater.dart';
 import 'package:rideshare_app/core/res/app_string.dart';
 import 'package:rideshare_app/features/data/data_sources/remote/core_service.dart';
 import 'package:rideshare_app/features/data/model/get_bicycle_by_category.dart';
 import 'package:rideshare_app/features/data/model/login_model/handling_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class GetBicycleByCategory {
   Dio dio = Dio();
@@ -19,7 +21,7 @@ class GetBicycleByCategoryImp extends GetBicycleByCategory {
       options: Options(
         headers: {
           'Authorization':
-              'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwOTgxMTAzMjA4IiwiaWF0IjoxNzI0NTg0MjYxLCJleHAiOjE3MjQ2NzA2NjF9.Z_qvt2BIiNHq_TFMjx6uFGnUHHxapW1t_daNZ6wX_ws'
+              'Bearer ${core.get<SharedPreferences>().getString('token')}'
         },
       ),
     );
