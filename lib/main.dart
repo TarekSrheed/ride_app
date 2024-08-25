@@ -3,8 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rideshare_app/core/bloc_manager/app_manager_bloc.dart';
 import 'package:rideshare_app/core/config/service_locater.dart';
 import 'package:rideshare_app/features/view/bloc/auth_bloc/auth_bloc.dart';
-import 'package:rideshare_app/features/view/pages/sing_up_view.dart';
-import 'package:rideshare_app/features/view/pages/welcome_view.dart';
+import 'package:rideshare_app/features/view/pages/Transport/select_transport.dart';
+import 'package:rideshare_app/features/view/pages/authentication/sign_in.dart';
+import 'package:rideshare_app/features/view/pages/authentication/sing_up_view.dart';
+import 'package:rideshare_app/features/view/pages/onboarding/onboarding_view.dart';
+import 'package:rideshare_app/features/view/pages/authentication/welcome_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,12 +34,11 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             switch (state) {
               case NavigateToMainPage():
-                return WelcomView();
+                return SelectTransport();
               case NavigateToOffline():
                 return oflinePage();
-
               default:
-                return SingUpView();
+                return SingInView();
             }
           },
         ),

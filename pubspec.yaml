@@ -44,6 +44,8 @@ dependencies:
   latlong2: ^0.9.1
   intl_phone_field: ^3.2.0
   intro_screen_onboarding_flutter: ^1.0.0
+  flutter_screenutil: ^5.9.3
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:

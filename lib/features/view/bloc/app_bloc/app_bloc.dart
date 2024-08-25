@@ -1,7 +1,5 @@
 // ignore_for_file: depend_on_referenced_packages
 
-import 'dart:math';
-
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:rideshare_app/features/data/data_sources/remote/get_bicycle_by_category.dart';
@@ -13,17 +11,14 @@ part 'app_event.dart';
 part 'app_state.dart';
 
 class AppBloc extends Bloc<AppEvent, AppState> {
-  final GetBicycleCategoryServiceImp getBicycleCategory;
-  final GetBicycleByCategoryImp getBicycleByCategory;
-
-  AppBloc(this.getBicycleCategory, this.getBicycleByCategory)
-      : super(AppInitial()) {
+  AppBloc() : super(AppInitial()) {
     List<GetBicycleCategoryModel> categories = [];
     List<GetBicycleByCategoryModel> bicycles = [];
     on<GetBicycleCategory>((event, emit) async {
       emit(LoadingState());
 
-      ResultModel result = await getBicycleCategory.getBicycleCategory();
+      ResultModel result =
+          await GetBicycleCategoryServiceImp().getBicycleCategory();
       if (result is ListOf<GetBicycleCategoryModel>) {
         categories = result.listOfData;
         emit(SuccessToGetCategories(categories: categories));
@@ -36,7 +31,7 @@ class AppBloc extends Bloc<AppEvent, AppState> {
       emit(LoadingState());
 
       ResultModel result =
-          await getBicycleByCategory.getBicycleByCategory(event.category);
+          await GetBicycleByCategoryImp().getBicycleByCategory(event.category);
       if (result is ListOf<GetBicycleByCategoryModel>) {
         bicycles = result.listOfData;
         emit(SuccessToGetBicycles(bicycles: bicycles));

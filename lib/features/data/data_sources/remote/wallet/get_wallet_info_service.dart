@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:rideshare_app/core/res/app_string.dart';
 import 'package:rideshare_app/features/data/data_sources/remote/core_service.dart';
 import 'package:rideshare_app/features/data/model/login_model/handling_model.dart';
-import 'package:rideshare_app/features/data/model/wallet/add_wallet_model.dart';
 import 'package:rideshare_app/features/data/model/wallet/get_wallet_info.dart';
 
 abstract class GetWalletInfoService extends CoreService {
