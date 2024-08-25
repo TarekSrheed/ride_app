@@ -1,11 +1,10 @@
 // ignore_for_file: depend_on_referenced_packages
 
-
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:rideshare_app/core/config/service_locater.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:shared_preferences/shared_preferences.dart';
 part 'app_manager_event.dart';
 part 'app_manager_state.dart';
 

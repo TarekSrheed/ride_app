@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class IntlPhoneFildWidget extends StatelessWidget {
-  IntlPhoneFildWidget({
+  const IntlPhoneFildWidget({
     super.key,
     required this.phoneController,
   });
@@ -12,7 +11,7 @@ class IntlPhoneFildWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntlPhoneField(
       controller: phoneController,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: 'Phone Number',
         border: OutlineInputBorder(
           borderSide: BorderSide(),

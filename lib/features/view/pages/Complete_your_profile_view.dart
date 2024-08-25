@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
-import 'package:rideshare_app/features/view/pages/sing_up_view.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
+import 'package:rideshare_app/features/view/widget/intl_phone.dart';
 
 import '../../../core/res/app_color.dart';
 import '../../../core/res/app_string.dart';
@@ -75,7 +73,7 @@ class CompleteYourProfile extends StatelessWidget {
               lableText: CITY,
               lableStyle: titleFavoStyle,
               suffixIcon: IconButton(
-                icon: Icon(Icons.keyboard_arrow_down),
+                icon: const Icon(Icons.keyboard_arrow_down),
                 onPressed: () {},
               ),
             ),
@@ -84,7 +82,7 @@ class CompleteYourProfile extends StatelessWidget {
               lableText: DISTRICT,
               lableStyle: titleFavoStyle,
               suffixIcon: IconButton(
-                icon: Icon(Icons.keyboard_arrow_down),
+                icon: const Icon(Icons.keyboard_arrow_down),
                 onPressed: () {},
               ),
             ),
@@ -93,13 +91,15 @@ class CompleteYourProfile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ButtonWidget(
-                    title: CANCEL,
-                    ontap: () {},
-                    color: darkPrimaryColor.withOpacity(0),
-                    textColor: titleColor,
-                    borderColor: darkPrimaryColor,
-                    size: MediaQuery.of(context).size.width * 0.4),
-                SizedBox(
+                  title: CANCEL,
+                  ontap: () {},
+                  color: darkPrimaryColor.withOpacity(0),
+                  textColor: titleColor,
+                  borderColor: darkPrimaryColor,
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  height: MediaQuery.of(context).size.height * 0.4,
+                ),
+                const SizedBox(
                   width: 15,
                 ),
                 ButtonWidget(
@@ -108,7 +108,8 @@ class CompleteYourProfile extends StatelessWidget {
                     color: darkPrimaryColor,
                     textColor: white,
                     borderColor: darkPrimaryColor,
-                    size: MediaQuery.of(context).size.width * 0.4),
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    height: MediaQuery.of(context).size.height * 0.4),
               ],
             ),
           ],

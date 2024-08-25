@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
+
 import 'package:rideshare_app/core/res/app_color.dart';
 import 'package:rideshare_app/features/view/pages/set_password_view.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
@@ -99,7 +99,8 @@ class _SingUpViewState extends State<SingUpView> {
                 color: darkPrimaryColor,
                 textColor: white,
                 borderColor: primaryColor,
-                size: paddingWidth,
+                width: paddingWidth,
+                height: paddingHeight,
               ),
               ContainerSingUpWithWidget(
                 title: SIGNUPWITHGMAIL,
@@ -122,4 +123,3 @@ class _SingUpViewState extends State<SingUpView> {
         ));
   }
 }
-
