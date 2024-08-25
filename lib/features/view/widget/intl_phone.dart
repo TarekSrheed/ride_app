@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:rideshare_app/core/res/app_string.dart';
 
 class IntlPhoneFildWidget extends StatelessWidget {
   const IntlPhoneFildWidget({
@@ -9,15 +10,27 @@ class IntlPhoneFildWidget extends StatelessWidget {
   final TextEditingController phoneController;
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return IntlPhoneField(
       controller: phoneController,
       decoration: const InputDecoration(
         labelText: 'Phone Number',
         border: OutlineInputBorder(
           borderSide: BorderSide(),
+=======
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
+      child: IntlPhoneField(
+        controller: phoneController,
+        decoration: InputDecoration(
+          labelText: AppString().YOURMOBILE,
+          border: const OutlineInputBorder(
+            borderSide: BorderSide(),
+          ),
+>>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
         ),
+        initialCountryCode: 'IN',
       ),
-      initialCountryCode: 'IN',
     );
   }
 }

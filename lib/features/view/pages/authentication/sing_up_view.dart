@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:lib/features/view/pages/sing_up_view.dart
 import 'package:flutter/widgets.dart';
 
+=======
+>>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513:lib/features/view/pages/authentication/sing_up_view.dart
 import 'package:rideshare_app/core/res/app_color.dart';
-import 'package:rideshare_app/features/view/pages/set_password_view.dart';
+import 'package:rideshare_app/core/res/app_images.dart';
+import 'package:rideshare_app/features/view/pages/authentication/set_password_view.dart';
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
-import 'package:rideshare_app/features/view/widget/container_singup_with.dart';
+import 'package:rideshare_app/features/view/widget/container/container_singup_with.dart';
+
 import 'package:rideshare_app/features/view/widget/intl_phone.dart';
 
-import '../../../core/res/app_string.dart';
-import '../../../core/res/app_style.dart';
-import '../widget/text_from_fild_widget.dart';
+import '../../../../core/res/app_string.dart';
+import '../../../../core/res/app_style.dart';
+import '../../widget/text_from_fild_widget.dart';
 
 class SingUpView extends StatefulWidget {
   SingUpView({super.key});
@@ -19,41 +24,47 @@ class SingUpView extends StatefulWidget {
 }
 
 class _SingUpViewState extends State<SingUpView> {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController emaillController = TextEditingController();
+  TextEditingController userNameController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
+
   TextEditingController genderController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     double paddingWidth = MediaQuery.of(context).size.width;
     double paddingHeight = MediaQuery.of(context).size.height;
+    AppString appString = AppString();
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(BACK),
+          elevation: 0,
+          title: Text(appString.BACK),
         ),
         body: Padding(
           padding: EdgeInsets.all(paddingWidth * 0.02),
           child: ListView(
             children: [
               Text(
-                SIGNUPWITH,
+                appString.SIGNUPWITH,
                 style: titleStyle,
               ),
-              TextFromFildWidget(
-                controller: nameController,
-                lableText: NAME,
-                lableStyle: titleFavoStyle,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TextFromFildWidget(
+                  controller: userNameController,
+                  lableText: appString.NAME,
+                ),
               ),
-              TextFromFildWidget(
-                controller: emaillController,
-                lableText: EMAIL,
-                lableStyle: titleFavoStyle,
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(vertical: 10.0),
+              //   child: TextFromFildWidget(
+              //     controller: emaillController,
+              //     lableText: appString.EMAIL,
+              //   ),
+              // ),
               IntlPhoneFildWidget(phoneController: phoneController),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: DropdownButtonFormField(
                   items: ['male', 'female'].map((String val) {
                     return DropdownMenuItem(
@@ -65,21 +76,22 @@ class _SingUpViewState extends State<SingUpView> {
                   }).toList(),
                   onChanged: (val) {
                     genderController.text = val!;
-                    print(genderController.text);
                   },
                   decoration: InputDecoration(
-                    labelText: GENDER,
+                    labelText: appString.GENDER,
                     labelStyle: titleFavoStyle,
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: darkPrimaryColor)),
+                      borderSide: BorderSide(color: darkPrimaryColor),
+                    ),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
                 ),
               ),
               ListTile(
                 title: Text(
-                  BYSIGININGUP,
+                  appString.BYSIGININGUP,
                   style: subtitleStyle,
                 ),
                 leading: Icon(
@@ -88,13 +100,17 @@ class _SingUpViewState extends State<SingUpView> {
                 ),
               ),
               ButtonWidget(
-                title: SIGINUP,
+                title: appString.SIGINUP,
                 ontap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SetPasswordView(),
-                      ));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SetPasswordView(
+                        userName: userNameController.text,
+                        phone: phoneController.text,
+                      ),
+                    ),
+                  );
                 },
                 color: darkPrimaryColor,
                 textColor: white,
@@ -103,19 +119,19 @@ class _SingUpViewState extends State<SingUpView> {
                 height: paddingHeight,
               ),
               ContainerSingUpWithWidget(
-                title: SIGNUPWITHGMAIL,
-                image: 'images/Gmail.png',
+                title: appString.SIGNUPWITHGMAIL,
+                image: gmailImage,
               ),
               ContainerSingUpWithWidget(
-                title: SIGNUPWITHFACEBOOK,
-                image: 'images/Gmail.png',
+                title: appString.SIGNUPWITHFACEBOOK,
+                image: facebookImage,
               ),
               ContainerSingUpWithWidget(
-                title: SIGNUPWITHAPPLE,
-                image: 'images/Gmail.png',
+                title: appString.SIGNUPWITHAPPLE,
+                image: appleImage,
               ),
               Text(
-                ALREADYHAVE,
+                appString.ALREADYHAVE,
                 style: titleStyle,
               )
             ],

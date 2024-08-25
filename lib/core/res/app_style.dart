@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare_app/core/res/app_color.dart';
 
-
 TextStyle titleStyle = TextStyle(
   color: titleColor,
   fontSize: 24,
@@ -13,8 +12,6 @@ TextStyle subtitleStyle = TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
 );
-
-
 
 TextStyle buttonTextStyle = TextStyle(
   color: white,
@@ -28,17 +25,15 @@ TextStyle titleFavoStyle = TextStyle(
   fontWeight: FontWeight.w500,
 );
 
-
 TextStyle skipForNowStyle = TextStyle(
   color: subTilteTwoColor,
   fontSize: 16,
   fontWeight: FontWeight.w500,
 );
 
-
 TextStyle hintStyle = TextStyle(
   color: hintColor,
-  fontSize: 24,
+  fontSize: 16,
   fontWeight: FontWeight.w500,
 );
 
@@ -208,4 +203,16 @@ TextStyle aboutUsTitleStyle = TextStyle(
   color: grayColor,
   fontSize: 14,
   fontWeight: FontWeight.w500,
+);
+
+TextStyle titleSpecifications = TextStyle(
+  color: grayColor,
+  fontSize: 10,
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle subTitleSpecifications = TextStyle(
+  color: subTitleColor,
+  fontSize: 8,
+  fontWeight: FontWeight.w400,
 );

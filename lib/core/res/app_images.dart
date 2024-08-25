@@ -1,4 +1,4 @@
-String appleImage = 'assets/images/apple.png';
+String appleImage = 'assets/images/Apple .png';
 String checkImage = 'assets/images/check.png';
 String discountImage = 'assets/images/discount.png';
 String downImage = 'assets/images/down.png';
@@ -13,3 +13,20 @@ String walletImage = 'assets/images/wallet.png';
 String welcomeImage = 'assets/images/welcome.png';
 String userImage = 'assets/images/user.png';
 String houseImage = 'assets/images/house.png';
+String car = 'assets/images/car.png';
+String cycle = 'assets/images/Cycle.png';
+String nameCar = 'assets/images/nameCar.png';
+String taxi = 'assets/images/Taxi.png';
+String bike = 'assets/images/Bike.png';
+String fual = 'assets/images/Fual.png';
+String mph = 'assets/images/mph.png';
+String speed = 'assets/images/Speed.png';
+String maxPower = 'assets/images/Max Power.png';
+String Payment = 'assets/images/Payment.png';
+String Payment1 = 'assets/images/Payment1 .png';
+String Payment2 = 'assets/images/Payment2.png';
+String Payment3 = 'assets/images/Payment3.png';
+String thank = 'assets/images/thank.png';
+String up='assets/images/Up.png';
+String down='assets/images/Down.png';
+

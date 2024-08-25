@@ -1,34 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:rideshare_app/core/res/app_color.dart';
+import 'package:rideshare_app/core/res/app_images.dart';
 import 'package:rideshare_app/core/res/app_string.dart';
+import 'package:rideshare_app/core/res/app_style.dart';
 
-import 'package:rideshare_app/features/view/pages/Complete_your_profile_view.dart';
-import 'package:rideshare_app/features/view/pages/set_password_view.dart';
-import 'package:rideshare_app/features/view/pages/sing_up_view.dart';
-import 'package:rideshare_app/features/view/pages/welcome_view.dart';
-
-void main(List<String> args) {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {
-        '/OnboardingView': (context) => OnboardingView(),
-        '/WelcomView': (context) => WelcomView(),
-        '/SingUpView': (context) => SingUpView(),
-        '/SetPasswordView': (context) => SetPasswordView(),
-        '/CompleteYourProfile': (context) => CompleteYourProfile(),
-      },
-      home: OnboardingView(),
-    );
-  }
-}
+import 'package:rideshare_app/features/view/pages/authentication/welcome_view.dart';
 
 class OnboardingView extends StatefulWidget {
   @override
@@ -87,7 +64,7 @@ class _OnboardingViewState extends State<OnboardingView>
       _goToWelcomePage(context); // انتقال فوري لصفحة Welcome
     }
   }
-
+    AppString appString = AppString();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,8 +73,8 @@ class _OnboardingViewState extends State<OnboardingView>
           TextButton(
             onPressed: () => _goToWelcomePage(context),
             child: Text(
-              SKIP,
-              style: TextStyle(color: blackColor),
+              appString. SKIP,
+              style: appBarLeadingStyle,
             ),
           ),
         ],
@@ -120,17 +97,20 @@ class _OnboardingViewState extends State<OnboardingView>
                 });
               },
               children: [
-                buildPage(
-                  image: 'images/onboardingOneImage.png',
-                  text: 'Welcome to our app!',
+                OnboardingColumn(
+                  image: onboardingOneImage,
+                  subtitle: appString. SELLHOUSES,
+                  title: appString. ANYWHERE,
                 ),
-                buildPage(
-                  image: 'images/onboardingOneImage.png',
-                  text: 'Learn more about our features.',
+                OnboardingColumn(
+                  image: onboardingOneImage,
+                  subtitle: appString. SELLHOUSES,
+                  title: appString. ATANYTIME,
                 ),
-                buildPage(
-                  image: 'images/onboardingOneImage.png',
-                  text: 'Ready to get started?',
+                OnboardingColumn(
+                  image: onboardingOneImage,
+                  subtitle: appString. SELLHOUSES,
+                  title: appString. BOOKYOURCAR,
                 ),
               ],
             ),
@@ -144,25 +124,6 @@ class _OnboardingViewState extends State<OnboardingView>
           ),
         ],
       ),
-    );
-  }
-
-  Widget buildPage({
-    required String image,
-    required String text,
-  }) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(image),
-        SizedBox(height: 30),
-        Text(
-          text,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-        SizedBox(height: 30),
-      ],
     );
   }
 }
@@ -242,6 +203,36 @@ class CircularButton extends StatelessWidget {
             ),
         ],
       ),
+    );
+  }
+}
+
+class OnboardingColumn extends StatelessWidget {
+  OnboardingColumn(
+      {required this.image, required this.title, required this.subtitle});
+  final String image;
+  final String title;
+  final String subtitle;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(image),
+        SizedBox(height: 30),
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: titleStyle,
+        ),
+        SizedBox(height: 30),
+        Text(
+          subtitle,
+          textAlign: TextAlign.center,
+          style: subtitleStyle,
+        ),
+        SizedBox(height: 30),
+      ],
     );
   }
 }

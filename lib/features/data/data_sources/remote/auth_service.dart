@@ -1,14 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:rideshare_app/core/config/service_locater.dart';
 import 'package:rideshare_app/core/handling_error/auth_exception.dart';
+import 'package:rideshare_app/core/res/app_string.dart';
 import 'package:rideshare_app/features/data/data_sources/remote/core_service.dart';
-import 'package:rideshare_app/features/data/model/login_user_model.dart';
-import 'package:rideshare_app/features/data/model/user_model.dart';
+import 'package:rideshare_app/features/data/model/login_model/login_user_model.dart';
+import 'package:rideshare_app/features/data/model/login_model/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class AuthService extends CoreService {
-  final String baseurl = "https://rideshare.devscape.online/api/v1/auth/";
-
   Future<bool> signUp(UserModel user);
   Future<bool> login(LoginUserModel user);
   AuthService(super.dio);
@@ -20,7 +19,8 @@ class AuthServiceImp extends AuthService {
   @override
   Future<bool> signUp(UserModel user) async {
     try {
-      response = await dio.post('${baseurl}register', data: user.toMap());
+      response = await dio.post('${AppString().BASEURL}/auth/register',
+          data: user.toMap());
       core
           .get<SharedPreferences>()
           .setString('token', response.data['body']['token']);
@@ -56,7 +56,8 @@ class AuthServiceImp extends AuthService {
   @override
   Future<bool> login(LoginUserModel user) async {
     try {
-      response = await dio.post('${baseurl}authenticate', data: user.toMap());
+      response =
+          await dio.post('${AppString().BASEURL}/auth/authenticate', data: user.toMap());
       core
           .get<SharedPreferences>()
           .setString('token', response.data['body']['token']);

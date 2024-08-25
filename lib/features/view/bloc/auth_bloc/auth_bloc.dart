@@ -3,8 +3,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:rideshare_app/core/handling_error/auth_handling.dart';
-import 'package:rideshare_app/features/data/model/login_user_model.dart';
-import 'package:rideshare_app/features/data/model/user_model.dart';
+import 'package:rideshare_app/features/data/model/login_model/login_user_model.dart';
+import 'package:rideshare_app/features/data/model/login_model/user_model.dart';
 import 'package:rideshare_app/features/data/repositories/auth_repository.dart';
 
 part 'auth_event.dart';
