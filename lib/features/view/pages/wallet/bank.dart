@@ -45,7 +45,7 @@ class Bank extends StatelessWidget {
               color: primaryColor,
               textColor: white,
               borderColor: primaryColor,
-              size: MediaQuery.of(context).size.width - 50,
+              width: MediaQuery.of(context).size.width - 50,
             ),
             const SizedBox(
               height: 20,

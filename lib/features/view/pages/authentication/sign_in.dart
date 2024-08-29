@@ -82,7 +82,7 @@ class _SingInViewState extends State<SingInView> {
                     color: darkPrimaryColor,
                     textColor: white,
                     borderColor: darkPrimaryColor,
-                    size: MediaQuery.of(context).size.width * 0.4),
+                    width: MediaQuery.of(context).size.width * 0.4),
               ),
               ContainerSingUpWithWidget(
                 title: appString.SIGNUPWITHGMAIL,

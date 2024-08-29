@@ -150,7 +150,7 @@ class _CarImageSliderState extends State<CarImageSlider> {
                           color: Colors.black.withOpacity(0),
                           textColor: primaryColor,
                           borderColor: primaryColor,
-                          size: MediaQuery.of(context).size.width / 2 - 40),
+                          width: MediaQuery.of(context).size.width / 2 - 40),
                       SizedBox(
                         width: 20,
                       ),
@@ -160,7 +160,7 @@ class _CarImageSliderState extends State<CarImageSlider> {
                           color: primaryColor,
                           textColor: white,
                           borderColor: primaryColor,
-                          size: MediaQuery.of(context).size.width / 2 - 40),
+                          width: MediaQuery.of(context).size.width / 2 - 40),
                     ],
                   )
                 ],

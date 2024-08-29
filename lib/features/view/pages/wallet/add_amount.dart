@@ -77,7 +77,7 @@ class AddAmount extends StatelessWidget {
               color: primaryColor,
               textColor: white,
               borderColor: primaryColor,
-              size: MediaQuery.of(context).size.width - 20,
+              width: MediaQuery.of(context).size.width - 20,
             ),
           ],
         ),

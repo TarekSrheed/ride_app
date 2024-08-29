@@ -1,7 +1,6 @@
 class AppString {
 // ignore_for_file: non_constant_identifier_names
 
-
 String SKIP = 'Skip';
 String PASSWORDMUSTHAVEUPPERCASE = 'password must have uppercase character';
 String USERNAMEINUSE = 'User name in used';
@@ -14,10 +13,13 @@ String PASSWORDMUSTHAVENUM = 'password must have number';
 String ANYWHERE = 'Anywhere you are';
 String SELLHOUSES =
     'Sell houses easily with the help of\n Listenoryx and to make this line big\n I am writing more.';
+
 String ATANYTIME = 'At anytime';
 String BOOKYOURCAR = 'Book your car';
 String INVALIDEMAILORPASSWORD = 'invalid email or password';
 String GO = 'Go';
+
+
 String FIRSTNAME = 'First Name';
 String LASTNAME = 'LastName';
 String USERNOTFOUND = 'user not found';
@@ -30,9 +32,11 @@ String HAVEAETTER = 'Have a better sharing experience';
 String CREATE = 'Create an account';
 String LOGIN = 'Log In';
 String BACK = 'Back';
-String SIGNUPWITH = 'Sign up with your email or \nphone number';
+String SIGNUPWITH = 'Sign up with your email or phone number';
+String NAME = 'Name';
+
+
 String SIGNUINWITH = 'Sign in with your email or \nphone number';
-String NAME = 'User Name';
 String REGISTER = 'Register';
 String PROFILE = 'Profile';
 String FULLNAME = 'Full Name';
@@ -59,9 +63,11 @@ String CONFIRMLOCATION = 'Confirm Location';
 String SELECTTRANSPORT = 'Select transport';
 String SELECTYOURTRANSPORT = 'Select your transport';
 String CYCLE = 'Cycle';
+
 String CAR = 'Car';
 String BIKE = 'Bike';
 String TAXI = 'Taxi';
+
 
 String AVAIABLECYCLE = 'Avaiable cars for ride';
 String RIDENOW = 'Ride Now';
@@ -120,7 +126,9 @@ String HELPANDSUPPORT = 'Help and Support';
 String UPCOMING = 'Upcoming';
 String COMPLETED = 'Completed';
 String CANCELLED = 'Cancelled';
+
 String BASEURL = 'https://rideshare.devscape.online/api/v1';
+
 String DONE = 'Done';
 String WRITEYOURCOMLAIN = 'Write your complain here (minimum 10 characters)';
 String SUBMIT = 'Submit';
@@ -140,6 +148,8 @@ String SENDMESSAGE = 'Send Message';
 String AREYOUSURE =
     'Are you sure you want to delete your account? Please read how account deletion will affect. Deleting your account removes personal information our database. Tour email becomes permanently reserved and same email cannot be re-use to register a new account.';
 String DELETE = 'Delete';
+String TRANSPORT = 'Transport';
+
 String DONTHAVE = 'Don’t have an account?';
 String EMAILORPHONE = 'Email or Phone Number';
 String ENTER = 'Enter Your Password';
@@ -151,3 +161,4 @@ String TIME = 'Time';
 String ACCOUNTNUMBER = 'Account Number';
 String SAVEPAYMENTMETHHOD = 'Save Payment Method';
 }
+

@@ -1,36 +1,41 @@
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
-  ButtonWidget({
+  const ButtonWidget({
     super.key,
     required this.title,
     required this.ontap,
     required this.color,
     required this.textColor,
     required this.borderColor,
-    required this.size,
+    required this.width,
+    // required this.height,
   });
   final String title;
   final void Function() ontap;
   final Color color;
   final Color textColor;
   final Color borderColor;
-  final double size;
+  final double width;
+  // final double height;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ontap,
       child: Container(
         alignment: Alignment.center,
-        width: size,
-        height: 54,
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        width: width,
         decoration: BoxDecoration(
             border: Border.all(color: borderColor),
             borderRadius: BorderRadius.circular(8),
             color: color),
         child: Text(
           title,
-          style: TextStyle(color: textColor),
+          style: TextStyle(
+            color: textColor,
+            fontSize: 18,
+          ),
         ),
       ),
     );

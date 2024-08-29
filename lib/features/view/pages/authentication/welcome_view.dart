@@ -11,7 +11,7 @@ import '../../../../core/res/app_style.dart';
 import '../../widget/button_widget.dart';
 
 class WelcomView extends StatelessWidget {
-  WelcomView({super.key});
+  const WelcomView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,8 @@ class WelcomView extends StatelessWidget {
                       builder: (context) => SingUpView(),
                     ));
               },
-              size: MediaQuery.of(context).size.width,
+              width: MediaQuery.of(context).size.width,
+            
               textColor: white,
               title: AppString().CREATE,
             ),
@@ -67,7 +68,8 @@ class WelcomView extends StatelessWidget {
                   //       builder: (context) => SingUpView(),
                   //     ));
                 },
-                size: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width,
+        
                 textColor: darkPrimaryColor,
                 title: AppString().LOGIN,
               ),

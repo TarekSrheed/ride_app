@@ -90,7 +90,7 @@ class RequestRentCharge extends StatelessWidget {
                     color: primaryColor,
                     textColor: white,
                     borderColor: primaryColor,
-                    size: MediaQuery.of(context).size.width - 70,
+                    width: MediaQuery.of(context).size.width - 70,
                   ),
                 ),
               ),
