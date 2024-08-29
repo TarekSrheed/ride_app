@@ -5,12 +5,14 @@ part of 'app_bloc.dart';
 sealed class AppEvent {}
 
 class GetBicycleCategory extends AppEvent {}
+
 class GetBicyclebyCategoryEvent extends AppEvent {
 final  String category;
   GetBicyclebyCategoryEvent({
     required this.category,
   });
 }
+
 
 
 

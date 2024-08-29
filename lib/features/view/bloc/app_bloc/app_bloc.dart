@@ -1,5 +1,4 @@
 // ignore_for_file: depend_on_referenced_packages
-
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:rideshare_app/features/data/data_sources/remote/get_bicycle_by_category.dart';
@@ -14,6 +13,7 @@ class AppBloc extends Bloc<AppEvent, AppState> {
   AppBloc() : super(AppInitial()) {
     List<GetBicycleCategoryModel> categories = [];
     List<GetBicycleByCategoryModel> bicycles = [];
+
     on<GetBicycleCategory>((event, emit) async {
       emit(LoadingState());
 
@@ -39,5 +39,6 @@ class AppBloc extends Bloc<AppEvent, AppState> {
         emit(ErrorState());
       }
     });
+
   }
 }

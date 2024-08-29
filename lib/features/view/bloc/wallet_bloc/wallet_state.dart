@@ -16,3 +16,17 @@ class GetwalletInfoState extends WalletState {
 
   GetwalletInfoState({required this.walletInfo});
 }
+
+class SuccessToGetCodes extends WalletState {
+  final List<GetCodeModel> code;
+  SuccessToGetCodes({
+    required this.code,
+  });
+}
+
+class SuccessToAddMoney extends WalletState {
+  final List<AddMoneyToWalletModel> modelForMoney;
+  SuccessToAddMoney({
+    required this.modelForMoney,
+  });
+}

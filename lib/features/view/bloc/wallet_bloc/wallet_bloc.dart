@@ -1,18 +1,25 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:rideshare_app/features/data/data_sources/remote/wallet/add_money_service.dart';
 import 'package:rideshare_app/features/data/data_sources/remote/wallet/add_wallet_service.dart';
+import 'package:rideshare_app/features/data/data_sources/remote/wallet/get_code_service.dart';
 import 'package:rideshare_app/features/data/data_sources/remote/wallet/get_wallet_info_service.dart';
 import 'package:rideshare_app/features/data/model/login_model/handling_model.dart';
+import 'package:rideshare_app/features/data/model/wallet/add_money_to_wallet_model.dart';
 import 'package:rideshare_app/features/data/model/wallet/add_wallet_model.dart';
+import 'package:rideshare_app/features/data/model/wallet/get_code_model.dart';
 import 'package:rideshare_app/features/data/model/wallet/get_wallet_info.dart';
 part 'wallet_event.dart';
 part 'wallet_state.dart';
 
 class WalletBloc extends Bloc<WalletEvent, WalletState> {
   final AddWalletServiceImp addwallet;
+
   final GetWalletInfoServiceImp getWalletInfo;
   WalletBloc(this.addwallet, this.getWalletInfo) : super(WalletInitial()) {
     List<GetWalletInfoModel> walletInfo = [];
+    List<AddMoneyToWalletModel> addMoneyList = [];
+        List<GetCodeModel> code = [];
     on<AddWalletEvent>((event, emit) async {
       emit(LoadingState());
       ResultModel result = await addwallet.addWallet(event.model);
@@ -28,6 +35,28 @@ class WalletBloc extends Bloc<WalletEvent, WalletState> {
       if (result is ListOf<GetWalletInfoModel>) {
         walletInfo = result.listOfData;
         emit(GetwalletInfoState(walletInfo: walletInfo));
+      } else {
+        emit(ErrorState());
+      }
+    });
+    on<GetCodesEvent>((event, emit) async {
+      emit(LoadingState());
+
+      ResultModel result = await GetCodeServiceImp().getCode();
+      if (result is ListOf<GetCodeModel>) {
+        code = result.listOfData;
+        emit(SuccessToGetCodes(code: code));
+      } else {
+        emit(ErrorState());
+      }
+    });
+     on<AddModeyEvent>((event, emit) async {
+      emit(LoadingState());
+
+      ResultModel result = await AddMoneyServiceImp().addMoney(event.code);
+      if (result is ListOf<AddMoneyToWalletModel>) {
+        addMoneyList = result.listOfData;
+        emit(SuccessToAddMoney(modelForMoney: addMoneyList));
       } else {
         emit(ErrorState());
       }

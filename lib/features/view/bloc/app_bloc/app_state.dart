@@ -19,6 +19,7 @@ class SuccessToGetBicycles extends AppState {
   });
 }
 
+
 class LoadingState extends AppState {}
 
 class ErrorState extends AppState {}
