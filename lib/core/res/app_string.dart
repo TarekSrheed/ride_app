@@ -10,33 +10,18 @@ String PASSWORDMUSTHAVESPICALCHARACTER = 'password must have speical character';
 String PASSWORDMUSTHAVE8 = 'password must have 8 character';
 String PASSWORDMUSTHAVENUM = 'password must have number';
 
-<<<<<<< HEAD
-String ANYWHERE = 'Anywhere you are';
-String SELLHOUSES =
-    'Sell houses easily with the help of Listenoryx and to make this line big I am writing more.';
-=======
-String SKIP = 'Skip';
-String PASSWORDMUSTHAVEUPPERCASE = 'password must have uppercase character';
-String USERNAMEINUSE = 'User name in used';
-String PHONENUMMUSTHAVE10 = 'phone number must have 10 number';
-String PHONENUMINUSE = 'Phone number in use';
-String PASSWORDMUSTHAVESPICALCHARACTER = 'password must have speical character';
-String PASSWORDMUSTHAVE8 = 'password must have 8 character';
-String PASSWORDMUSTHAVENUM = 'password must have number';
-
 String ANYWHERE = 'Anywhere you are';
 String SELLHOUSES =
     'Sell houses easily with the help of\n Listenoryx and to make this line big\n I am writing more.';
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
+
 String ATANYTIME = 'At anytime';
 String BOOKYOURCAR = 'Book your car';
 String INVALIDEMAILORPASSWORD = 'invalid email or password';
 String GO = 'Go';
-<<<<<<< HEAD
-=======
+
+
 String FIRSTNAME = 'First Name';
 String LASTNAME = 'LastName';
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
 String USERNOTFOUND = 'user not found';
 String ENABLEYOURLOCATION = 'Enable your location';
 String CHOOSE = 'Choose your location to start find the request around you';
@@ -47,14 +32,11 @@ String HAVEAETTER = 'Have a better sharing experience';
 String CREATE = 'Create an account';
 String LOGIN = 'Log In';
 String BACK = 'Back';
-<<<<<<< HEAD
 String SIGNUPWITH = 'Sign up with your email or phone number';
 String NAME = 'Name';
-=======
-String SIGNUPWITH = 'Sign up with your email or \nphone number';
+
+
 String SIGNUINWITH = 'Sign in with your email or \nphone number';
-String NAME = 'User Name';
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
 String REGISTER = 'Register';
 String PROFILE = 'Profile';
 String FULLNAME = 'Full Name';
@@ -81,13 +63,12 @@ String CONFIRMLOCATION = 'Confirm Location';
 String SELECTTRANSPORT = 'Select transport';
 String SELECTYOURTRANSPORT = 'Select your transport';
 String CYCLE = 'Cycle';
-<<<<<<< HEAD
-=======
+
 String CAR = 'Car';
 String BIKE = 'Bike';
 String TAXI = 'Taxi';
 
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
+
 String AVAIABLECYCLE = 'Avaiable cars for ride';
 String RIDENOW = 'Ride Now';
 String BOOKLATER = 'Book later';
@@ -145,10 +126,9 @@ String HELPANDSUPPORT = 'Help and Support';
 String UPCOMING = 'Upcoming';
 String COMPLETED = 'Completed';
 String CANCELLED = 'Cancelled';
-<<<<<<< HEAD
-=======
+
 String BASEURL = 'https://rideshare.devscape.online/api/v1';
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
+
 String DONE = 'Done';
 String WRITEYOURCOMLAIN = 'Write your complain here (minimum 10 characters)';
 String SUBMIT = 'Submit';
@@ -168,9 +148,8 @@ String SENDMESSAGE = 'Send Message';
 String AREYOUSURE =
     'Are you sure you want to delete your account? Please read how account deletion will affect. Deleting your account removes personal information our database. Tour email becomes permanently reserved and same email cannot be re-use to register a new account.';
 String DELETE = 'Delete';
-<<<<<<< HEAD
 String TRANSPORT = 'Transport';
-=======
+
 String DONTHAVE = 'Don’t have an account?';
 String EMAILORPHONE = 'Email or Phone Number';
 String ENTER = 'Enter Your Password';
@@ -182,4 +161,4 @@ String TIME = 'Time';
 String ACCOUNTNUMBER = 'Account Number';
 String SAVEPAYMENTMETHHOD = 'Save Payment Method';
 }
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
+

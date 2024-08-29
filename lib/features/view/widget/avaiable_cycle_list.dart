@@ -71,14 +71,14 @@ class AvaiableCycleList extends StatelessWidget {
                     color: Colors.black.withOpacity(0),
                     textColor: primaryColor,
                     borderColor: primaryColor,
-                    size: MediaQuery.of(context).size.width / 2.5),
+                    width: MediaQuery.of(context).size.width / 2.5),
                 ButtonWidget(
                     title: AppString().RIDENOW,
                     ontap: () {},
                     color: primaryColor,
                     textColor: white,
                     borderColor: primaryColor,
-                    size: MediaQuery.of(context).size.width / 2.5),
+                    width: MediaQuery.of(context).size.width / 2.5),
               ],
             ),
           )

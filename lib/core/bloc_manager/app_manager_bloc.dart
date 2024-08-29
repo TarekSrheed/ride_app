@@ -1,10 +1,10 @@
 // ignore_for_file: depend_on_referenced_packages
 
-<<<<<<< HEAD
+
 import 'package:bloc/bloc.dart';
-=======
+
 import 'package:flutter_bloc/flutter_bloc.dart';
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
+
 import 'package:meta/meta.dart';
 import 'package:rideshare_app/core/config/service_locater.dart';
 

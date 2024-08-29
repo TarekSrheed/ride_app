@@ -93,7 +93,7 @@ class SetPasswordView extends StatelessWidget {
                 color: darkPrimaryColor,
                 textColor: white,
                 borderColor: darkPrimaryColor,
-                size: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width,
               ),
             ],
           ),

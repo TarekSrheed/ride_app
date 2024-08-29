@@ -123,7 +123,7 @@ class CompleteYourProfile extends StatelessWidget {
                     color: darkPrimaryColor.withOpacity(0),
                     textColor: titleColor,
                     borderColor: darkPrimaryColor,
-                    size: MediaQuery.of(context).size.width * 0.4),
+                    width: MediaQuery.of(context).size.width * 0.4),
                 SizedBox(
                   width: 15,
                 ),
@@ -156,7 +156,7 @@ class CompleteYourProfile extends StatelessWidget {
                       color: darkPrimaryColor,
                       textColor: white,
                       borderColor: darkPrimaryColor,
-                      size: MediaQuery.of(context).size.width * 0.4),
+                      width: MediaQuery.of(context).size.width * 0.4),
                 ),
               ],
             ),

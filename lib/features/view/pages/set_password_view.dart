@@ -15,7 +15,7 @@ class SetPasswordView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          BACK,
+        AppString().  BACK,
           style: titleStyle,
         ),
       ),
@@ -28,7 +28,7 @@ class SetPasswordView extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  SETPASSWORD,
+               AppString().   SETPASSWORD,
                   style: titleStyle,
                 ),
               ),
@@ -36,32 +36,32 @@ class SetPasswordView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 15.0),
                 child: Center(
                   child: Text(
-                    SETYOURPASSWORD,
+                   AppString(). SETYOURPASSWORD,
                     style: subtitleStyle,
                   ),
                 ),
               ),
               TextFromFildWidget(
                 controller: passwordController,
-                lableText: ENTERYOURPASSWORD,
-                lableStyle: titleFavoStyle,
+                lableText:AppString(). ENTERYOURPASSWORD,
+               
                 suffixIcon: const Icon(Icons.visibility_off_outlined),
               ),
               TextFromFildWidget(
                 controller: confirmeController,
-                lableText: CONFIRMPASSWORD,
-                lableStyle: titleFavoStyle,
+                lableText:AppString(). CONFIRMPASSWORD,
+               
                 suffixIcon: const Icon(Icons.visibility_off_outlined),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 35.0),
                 child: Text(
-                  ATLEAST,
+                 AppString(). ATLEAST,
                   style: subtitleStyle,
                 ),
               ),
               ButtonWidget(
-                title: REGISTER,
+                title:AppString(). REGISTER,
                 ontap: () {
                   Navigator.push(
                     context,
@@ -76,7 +76,7 @@ class SetPasswordView extends StatelessWidget {
                 textColor: white,
                 borderColor: darkPrimaryColor,
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
+               
               )
             ],
           ),

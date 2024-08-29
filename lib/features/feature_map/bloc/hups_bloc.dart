@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:rideshare_app/features/frature_map/data/hups_servies.dart';
+import 'package:rideshare_app/features/feature_map/data/hups_servies.dart';
 
 import '../data/model/hups_model.dart';
 

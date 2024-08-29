@@ -9,7 +9,7 @@ class ButtonWidget extends StatelessWidget {
     required this.textColor,
     required this.borderColor,
     required this.width,
-    required this.height,
+    // required this.height,
   });
   final String title;
   final void Function() ontap;
@@ -17,28 +17,25 @@ class ButtonWidget extends StatelessWidget {
   final Color textColor;
   final Color borderColor;
   final double width;
-  final double height;
+  // final double height;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ontap,
       child: Container(
         alignment: Alignment.center,
-<<<<<<< HEAD
+        padding: const EdgeInsets.symmetric(vertical: 10),
         width: width,
-        height: height,
-        padding: const EdgeInsets.symmetric(vertical: 20),
-=======
-        width: size,
-        height: 54,
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513
         decoration: BoxDecoration(
             border: Border.all(color: borderColor),
             borderRadius: BorderRadius.circular(8),
             color: color),
         child: Text(
           title,
-          style: TextStyle(color: textColor),
+          style: TextStyle(
+            color: textColor,
+            fontSize: 18,
+          ),
         ),
       ),
     );

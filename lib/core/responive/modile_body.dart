@@ -8,7 +8,8 @@ import 'package:rideshare_app/core/location_permissions/location_permissions.dar
 import 'package:rideshare_app/core/res/app_color.dart';
 import 'package:rideshare_app/core/res/app_string.dart';
 import 'package:rideshare_app/core/res/app_style.dart';
-import 'package:rideshare_app/features/frature_map/bloc/hups_bloc.dart';
+import 'package:rideshare_app/features/feature_map/bloc/hups_bloc.dart';
+
 import 'package:rideshare_app/features/view/widget/button_widget.dart';
 import 'package:rideshare_app/features/view/widget/custom_tab_bar.dart';
 import 'package:rideshare_app/features/view/widget/text_from_fild_widget.dart';
@@ -138,11 +139,11 @@ class ModileBodyState extends State<ModileBody> {
                     child: ButtonWidget(
                       ontap: () {},
                       width: 172,
-                      height: 60,
+                    
                       textColor: white,
                       color: darkPrimaryColor,
                       borderColor: darkPrimaryColor,
-                      title: RENTAL,
+                      title: AppString().RENTAL,
                     ),
                   ),
                   InkWell(
@@ -200,8 +201,8 @@ class ModileBodyState extends State<ModileBody> {
                         Icons.favorite,
                         size: 15,
                       ),
-                      lableText: WHEREWOULDYOUGO,
-                      lableStyle: hintStyle,
+                      lableText:AppString().WHEREWOULDYOUGO,
+                    
                     ),
                     const CustomTabbar(),
                   ],

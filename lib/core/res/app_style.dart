@@ -216,3 +216,8 @@ TextStyle subTitleSpecifications = TextStyle(
   fontSize: 8,
   fontWeight: FontWeight.w400,
 );
+TextStyle titleOfferStyle = TextStyle(
+  color: titleOffer,
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+);

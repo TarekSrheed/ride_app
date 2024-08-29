@@ -27,7 +27,7 @@ class Wallet extends StatelessWidget {
                 color: Colors.black.withOpacity(0),
                 textColor: primaryColor,
                 borderColor: primaryColor,
-                size: MediaQuery.of(context).size.width / 2 - 25,
+                width: MediaQuery.of(context).size.width / 2 - 25,
               ),
             ),
             const SizedBox(

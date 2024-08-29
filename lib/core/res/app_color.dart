@@ -17,6 +17,7 @@ Color titleColor = const Color(0xff414141);
 Color subTitleColor = const Color(0xffA0A0A0);
 Color subTilteTwoColor = const Color(0xffB8B8B8);
 Color deleteButtonColor = const Color(0xffF44336);
+Color titleOffer=const Color(0xffF57F17);
 Color hintColor = const Color(0xffD0D0D0);
 Color grayColor = const Color(0xff5A5A5A);
 Color blackColor = const Color(0xff121212);

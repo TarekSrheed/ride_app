@@ -54,7 +54,7 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
                   textColor: darkPrimaryColor,
                   borderColor: darkPrimaryColor,
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
+                  // height: MediaQuery.of(context).size.height,
                 ),
               ),
             ],

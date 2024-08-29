@@ -50,7 +50,8 @@ class AvaiableCycle extends StatelessWidget {
                 color: Colors.black.withOpacity(0),
                 textColor: primaryColor,
                 borderColor: primaryColor,
-                size: double.infinity),
+                width: double.infinity,
+                ),
           )
         ],
       ),

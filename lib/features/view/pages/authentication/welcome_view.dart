@@ -49,7 +49,7 @@ class WelcomView extends StatelessWidget {
                     ));
               },
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
+            
               textColor: white,
               title: AppString().CREATE,
             ),
@@ -69,7 +69,7 @@ class WelcomView extends StatelessWidget {
                   //     ));
                 },
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
+        
                 textColor: darkPrimaryColor,
                 title: AppString().LOGIN,
               ),

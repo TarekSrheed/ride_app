@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD:lib/features/view/pages/sing_up_view.dart
+
 import 'package:flutter/widgets.dart';
 
-=======
->>>>>>> 754d5ae7bccc02137f2eb8df2fa5bc6f5d950513:lib/features/view/pages/authentication/sing_up_view.dart
 import 'package:rideshare_app/core/res/app_color.dart';
 import 'package:rideshare_app/core/res/app_images.dart';
 import 'package:rideshare_app/features/view/pages/authentication/set_password_view.dart';
@@ -116,7 +114,7 @@ class _SingUpViewState extends State<SingUpView> {
                 textColor: white,
                 borderColor: primaryColor,
                 width: paddingWidth,
-                height: paddingHeight,
+            
               ),
               ContainerSingUpWithWidget(
                 title: appString.SIGNUPWITHGMAIL,

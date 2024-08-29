@@ -17,7 +17,7 @@ class CompleteYourProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(PROFILE),
+        title: Text(AppString().PROFILE),
         centerTitle: true,
       ),
       body: Padding(
@@ -52,26 +52,26 @@ class CompleteYourProfile extends StatelessWidget {
             ),
             TextFromFildWidget(
               controller: NameController,
-              lableText: FULLNAME,
-              lableStyle: titleFavoStyle,
+              lableText:AppString(). FULLNAME,
+             
             ),
             IntlPhoneFildWidget(
               phoneController: phoneController,
             ),
             TextFromFildWidget(
               controller: emaillController,
-              lableText: EMAIL,
-              lableStyle: titleFavoStyle,
+              lableText:AppString(). EMAIL,
+             
             ),
             TextFromFildWidget(
               controller: streetController,
-              lableText: STREET,
-              lableStyle: titleFavoStyle,
+              lableText:AppString(). STREET,
+             
             ),
             TextFromFildWidget(
               controller: streetController,
-              lableText: CITY,
-              lableStyle: titleFavoStyle,
+              lableText:AppString(). CITY,
+             
               suffixIcon: IconButton(
                 icon: const Icon(Icons.keyboard_arrow_down),
                 onPressed: () {},
@@ -79,8 +79,8 @@ class CompleteYourProfile extends StatelessWidget {
             ),
             TextFromFildWidget(
               controller: streetController,
-              lableText: DISTRICT,
-              lableStyle: titleFavoStyle,
+              lableText:AppString(). DISTRICT,
+             
               suffixIcon: IconButton(
                 icon: const Icon(Icons.keyboard_arrow_down),
                 onPressed: () {},
@@ -91,25 +91,25 @@ class CompleteYourProfile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ButtonWidget(
-                  title: CANCEL,
+                  title:AppString(). CANCEL,
                   ontap: () {},
                   color: darkPrimaryColor.withOpacity(0),
                   textColor: titleColor,
                   borderColor: darkPrimaryColor,
                   width: MediaQuery.of(context).size.width * 0.4,
-                  height: MediaQuery.of(context).size.height * 0.4,
+                 
                 ),
                 const SizedBox(
                   width: 15,
                 ),
                 ButtonWidget(
-                    title: SAVE,
+                    title:AppString(). SAVE,
                     ontap: () {},
                     color: darkPrimaryColor,
                     textColor: white,
                     borderColor: darkPrimaryColor,
                     width: MediaQuery.of(context).size.width * 0.4,
-                    height: MediaQuery.of(context).size.height * 0.4),
+                 ),
               ],
             ),
           ],

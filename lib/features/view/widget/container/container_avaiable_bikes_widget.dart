@@ -53,7 +53,7 @@ class ContainerAvaiableBikesWidget extends StatelessWidget {
                   color: Colors.white.withOpacity(0),
                   textColor: darkPrimaryColor,
                   borderColor: darkPrimaryColor,
-                  size: 45,
+                  width: 45,
                
                 ),
               ),
